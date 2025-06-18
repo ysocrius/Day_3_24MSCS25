@@ -244,7 +244,7 @@ public class Main {
         coursesCollection.insertMany(java.util.Arrays.asList(course1, course2, course3));
         System.out.println("Inserted 3 courses into the database");
 
-        // Display inserted documents
+
         System.out.println("\nStudents in database:");
         try (MongoCursor<Document> cursor = studentsCollection.find().iterator()) {
             while (cursor.hasNext()) {

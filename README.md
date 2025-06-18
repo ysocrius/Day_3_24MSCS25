@@ -22,50 +22,7 @@ This Java application manages student enrollments in courses using MongoDB. It d
 - MongoDB server running on localhost:27017
 - Maven for dependency management
 
-## Setup and Running
 
-1. Ensure MongoDB server is running on localhost:27017
-   - If you're using MongoDB Compass, ensure the connection is active
-   - You can use Docker to run MongoDB: `docker run -d -p 27017:27017 --name mongodb mongo:latest`
-
-2. Clone this repository
-
-3. Run the application using one of the following methods:
-   - Using Maven directly:
-     ```
-     mvn clean compile exec:java
-     ```
-   - Using the provided batch script (Windows):
-     ```
-     .\run.bat
-     ```
-   - Using the provided shell script (Linux/Mac):
-     ```
-     chmod +x run.sh
-     ./run.sh
-     ```
-
-4. When the application starts, an interactive menu will be displayed:
-   ```
-   --- MONGODB STUDENT ENROLLMENT SYSTEM ---
-   Please select an operation to perform:
-   1. Clear all collections
-   2. Insert sample students and courses
-   3. Create enrollments (embedded and referenced)
-   4. Query enrollments and show document structures
-   5. Update student name (demonstrate reference vs. embedded)
-   6. Create indexes for querying students
-   7. Run all operations in sequence
-   0. Exit
-   ```
-
-5. To test all functionality at once, select option 7.
-
-## Project Structure
-
-- `src/main/java/org/example/Main.java` - Main application code with all MongoDB operations
-- `src/main/resources/mongodb.properties` - Configuration for MongoDB connection
-- `run.bat`/`run.sh` - Scripts to run the application
 
 ## MongoDB Document Structure
 
@@ -119,21 +76,8 @@ When you run the application, you'll be able to:
 3. Create both referenced and embedded enrollments
 4. Query both types of enrollments and see their structural differences
 5. Update a student's name and observe how it affects both enrollment types differently
-6. Create and test indexes on the students collection
 
 The application provides detailed explanations of each operation's results, highlighting the key differences between referenced and embedded document approaches.
-
-## Key Learnings
-
-1. **Referenced Documents:**
-   - Advantages: Data consistency (update once, reflected everywhere), reduced duplication
-   - Disadvantages: Requires multiple queries to retrieve related data
-
-2. **Embedded Documents:**
-   - Advantages: Faster read operations (single query retrieves all related data)
-   - Disadvantages: Data duplication, inconsistency when parent documents change, potentially larger documents
-
-This project demonstrates when to use each approach based on your application's requirements.
 
 ## Screenshots
 
