@@ -97,7 +97,11 @@ The application provides detailed explanations of each operation's results, high
 
 ![Updating Student Name](screenshots/Screenshot%202025-06-18%20164611.png)
 
-### 5. Document Size Comparison
+### 5. After Updating:
+
+![After Updating](screenshots/Screenshot%202025-06-18%20170622.png)
+
+### 6. Document Size Comparison
 
 ![Document Size Comparison](screenshots/Screenshot%202025-06-18%20165128.png)
 
@@ -122,8 +126,6 @@ The enrollments collection shows both document structures:
 #### Referenced Enrollment:
 ![Referenced Enrollment](screenshots/Screenshot%202025-06-18%20170006.png)
 
-#### Embedded Enrollment:
-![Embedded Enrollment](screenshots/Screenshot%202025-06-18%20170622.png)
 
 These screenshots clearly demonstrate the structural differences between referenced and embedded documents in MongoDB. Note how the embedded enrollment contains complete copies of the student and course documents, while the referenced enrollment only contains their ObjectIds.
 
